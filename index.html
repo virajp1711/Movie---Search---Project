@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSearch - Movie Search App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   
+    <div class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>CineSearch</h1>
+                <p>Discover your next favorite movie</p>
+
+                
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="search" id="searchInput" class="search-input" placeholder="Search for movies..."
+                        autocomplete="off" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="main-content">
+        <div class="container">
+           
+            <div class="error-container" id="errorContainer">
+                <div class="error-icon">⚠️</div>
+                <h3 class="error-title">Error</h3>
+                <p class="error-text" id="errorText">Something went wrong</p>
+                <div class="api-help" id="apiHelp" style="display: none;">
+                    <h4>How to get a TMDB API key:</h4>
+                    <ol>
+                        <li>1. Go to <span class="highlight">themoviedb.org</span> and create an account</li>
+                        <li>2. Go to your account settings</li>
+                        <li>3. Click on "API" in the left sidebar</li>
+                        <li>4. Follow the instructions to request an API key</li>
+                        <li>5. Replace the API_KEY in the code with your new key</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+            </div>
+
+            
+            <div class="no-results" id="noResults">
+                <div class="no-results-icon">🎬</div>
+                <h3>No movies found</h3>
+                <p>Try searching for something else</p>
+            </div>
+
+            
+            <div class="movies-grid" id="moviesGrid"></div>
+        </div>
+    </div>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <!-- Social Icons -->
+            <div class="social-section">
+                <h4 class="social-label">viraj.dev :</h4>
+                <a
+                    href="https://github.com/virajp1711"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-icon github"
+                >
+                    <i class="fab fa-github"></i>
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/viraj-patil-300529358"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-icon linkedin"
+                >
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                    href="https://www.instagram.com/viraj_p_007"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-icon instagram"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            
+            <p>
+                Copyright 2025 &copy; All rigths reserved
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
